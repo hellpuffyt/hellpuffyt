@@ -161,7 +161,7 @@ ${drawCSS}${reduce}` : '';
     `<g class="h1">${hl.line1}</g><g class="h2">${hl.line2}</g>` +
     `<path class="rule" d="M${M} 480H${W - M}" stroke="${c.line}"/>` +
     `<g class="meta">${footer}` +
-    text('mono', 'SOFTWARE ENGINEER  /  CS ENGINEERING STUDENT', { x: W - M, y: 532, size: 15, tracking: 0.1, anchor: 'end', fill: c.steel }) + `</g>` +
+    text('mono', 'SOFTWARE ENGINEER', { x: W - M, y: 532, size: 15, tracking: 0.1, anchor: 'end', fill: c.steel }) + `</g>` +
     construction({ x: 1088, y: 120, size: 360, animate });
   return svgDoc({
     w: W, h: H,

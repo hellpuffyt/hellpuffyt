@@ -1,11 +1,11 @@
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/hellpuff-banner-static.svg">
-  <img src="assets/hellpuff-banner.svg" width="100%" alt="hellpuff — Engineering ideas into products. Software engineer and CS engineering student working across products, infrastructure, security and AI systems.">
+  <img src="assets/hellpuff-banner.svg" width="100%" alt="hellpuff — Engineering ideas into products. Software engineer working across products, infrastructure, security and AI systems.">
 </picture>
 
 <br>
 
-I'm **Prabesh Sharma**, a computer science engineering student and software engineer in Nepal. I build commercial SaaS platforms, and I build systems software from first principles to understand it properly.
+I'm **Prabesh Sharma**, a software engineer in Nepal. I build commercial SaaS platforms, and I build systems software from first principles to understand it properly.
 
 **[hellpuff.dev ↗](https://www.hellpuff.dev)** &nbsp;·&nbsp; [Work](https://www.hellpuff.dev/work) &nbsp;·&nbsp; [CV](https://www.hellpuff.dev/cv) &nbsp;·&nbsp; [All public projects](PROJECTS.md) &nbsp;·&nbsp; [Skills](SKILLS.md)
 
