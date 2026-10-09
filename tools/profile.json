@@ -105,182 +105,188 @@
       "blurb": "Older experiments, kept public for context."
     }
   ],
-  "toolkit": [
-    {
-      "group": "Languages",
-      "primary": [
-        [
-          "typescript",
-          "TypeScript"
-        ],
-        [
-          "python",
-          "Python"
-        ],
-        [
-          "rust",
-          "Rust"
-        ],
-        [
-          "go",
-          "Go"
-        ]
-      ],
-      "also": [
-        [
-          "javascript",
-          "JavaScript"
-        ],
-        [
-          "openjdk",
-          "Java"
-        ],
-        [
-          "cplusplus",
-          "C++"
-        ],
-        [
-          "dotnet",
-          "C#"
-        ],
-        [
-          null,
-          "SQL"
-        ]
-      ]
-    },
-    {
-      "group": "Interface",
-      "primary": [
-        [
-          "react",
-          "React"
-        ],
-        [
-          "nextdotjs",
-          "Next.js"
-        ],
-        [
-          "tailwindcss",
-          "Tailwind CSS"
-        ],
-        [
-          "vite",
-          "Vite"
-        ]
-      ],
-      "also": [
-        [
-          "expo",
-          "Expo / React Native"
-        ],
-        [
-          "tauri",
-          "Tauri"
-        ],
-        [
-          "threedotjs",
-          "three.js"
-        ]
-      ]
-    },
-    {
-      "group": "Services",
-      "primary": [
-        [
-          "nodedotjs",
-          "Node.js"
-        ],
-        [
-          "nestjs",
-          "NestJS"
-        ],
-        [
-          "fastapi",
-          "FastAPI"
-        ],
-        [
-          "express",
-          "Express"
-        ]
-      ],
-      "also": [
-        [
-          "socketdotio",
-          "Socket.IO"
-        ]
-      ]
-    },
-    {
-      "group": "Data",
-      "primary": [
-        [
-          "postgresql",
-          "PostgreSQL"
-        ],
-        [
-          "prisma",
-          "Prisma"
-        ],
-        [
-          "sqlalchemy",
-          "SQLAlchemy"
-        ],
-        [
-          "redis",
-          "Redis"
-        ]
-      ],
-      "also": []
-    },
-    {
-      "group": "Delivery",
-      "primary": [
-        [
-          "docker",
-          "Docker"
-        ],
-        [
-          "githubactions",
-          "GitHub Actions"
-        ],
-        [
-          "vercel",
-          "Vercel"
-        ],
-        [
-          "linux",
-          "Linux"
-        ]
-      ],
-      "also": [
-        [
-          "cloudflare",
-          "Cloudflare"
-        ]
-      ]
-    },
-    {
-      "group": "Quality",
-      "primary": [
-        [
-          "vitest",
-          "Vitest"
-        ],
-        [
-          "pytest",
-          "pytest"
-        ],
-        [
-          null,
-          "Playwright"
-        ],
-        [
-          null,
-          "cargo test"
-        ]
-      ],
-      "also": []
-    }
-  ]
+  "stack": [
+    [
+      "typescript",
+      "TypeScript"
+    ],
+    [
+      "python",
+      "Python"
+    ],
+    [
+      "rust",
+      "Rust"
+    ],
+    [
+      "go",
+      "Go"
+    ],
+    [
+      "react",
+      "React"
+    ],
+    [
+      "nextdotjs",
+      "Next.js"
+    ],
+    [
+      "tailwindcss",
+      "Tailwind"
+    ],
+    [
+      "nodedotjs",
+      "Node.js"
+    ],
+    [
+      "nestjs",
+      "NestJS"
+    ],
+    [
+      "fastapi",
+      "FastAPI"
+    ],
+    [
+      "postgresql",
+      "Postgres"
+    ],
+    [
+      "redis",
+      "Redis"
+    ],
+    [
+      "docker",
+      "Docker"
+    ],
+    [
+      "githubactions",
+      "Actions"
+    ]
+  ],
+  "work": {
+    "products": [
+      {
+        "slug": "datajewellers",
+        "name": "DataJewellers",
+        "desc": "Jewellery ERP and billing for Nepal",
+        "status": "Commercial",
+        "url": "https://datajewellers.com",
+        "label": "datajewellers.com"
+      },
+      {
+        "slug": "datarestro",
+        "name": "DataRestro",
+        "desc": "Restaurant operating system",
+        "status": "Working build",
+        "url": "https://datarestro.com",
+        "label": "datarestro.com"
+      },
+      {
+        "slug": "dataudaan",
+        "name": "DataUdaan",
+        "desc": "Flights, hotels and buses behind one supplier layer",
+        "status": "In development",
+        "url": "https://dataudaan.com",
+        "label": "dataudaan.com"
+      },
+      {
+        "slug": "dataaccommodation",
+        "name": "DataAccommodation",
+        "desc": "Hotel operating system, PMS to guest portal",
+        "status": "Working build",
+        "url": "https://dataaccomodation.com",
+        "label": "dataaccomodation.com"
+      },
+      {
+        "slug": "dataitemize",
+        "name": "DataItemize",
+        "desc": "Configurable inventory on an immutable ledger",
+        "status": "Working build",
+        "url": "https://www.hellpuff.dev/work/dataitemize",
+        "label": "case study"
+      },
+      {
+        "slug": "timetravel",
+        "name": "TimeTravel",
+        "desc": "B2B airline ticketing for travel agencies",
+        "status": "Commercial",
+        "url": "https://www.hellpuff.dev/work/timetravel",
+        "label": "case study"
+      },
+      {
+        "slug": "sita-shree",
+        "name": "Sita Shree Jewellers",
+        "desc": "Storefront and billing ERP for a client jeweller",
+        "status": "Deployed",
+        "url": "https://www.sitashreejewellers.com",
+        "label": "sitashreejewellers.com"
+      }
+    ],
+    "systems": [
+      {
+        "slug": "sugar-os",
+        "name": "Sugar OS",
+        "desc": "Personal AI operating system, written in Rust",
+        "status": "In development",
+        "url": "https://www.hellpuff.dev/work/sugar-os",
+        "label": "case study"
+      },
+      {
+        "slug": "slm",
+        "name": "Serverless Log Monitoring & Threat Alert System",
+        "desc": "Rule-based detection, brute-force windows, webhook alerts",
+        "status": "Prototype",
+        "url": "https://github.com/hellpuffyt/vercel-slm",
+        "label": "source"
+      },
+      {
+        "slug": "bellows-compiler",
+        "name": "bellows-compiler",
+        "desc": "Optimizing compiler with x86-64 codegen",
+        "status": "Rust",
+        "url": "https://github.com/hellpuffyt/bellows-compiler",
+        "label": "source"
+      },
+      {
+        "slug": "tesseradb",
+        "name": "tesseradb",
+        "desc": "Temporal SQL database, every row version kept",
+        "status": "Rust",
+        "url": "https://github.com/hellpuffyt/tesseradb",
+        "label": "source"
+      },
+      {
+        "slug": "halyard-vm",
+        "name": "halyard-vm",
+        "desc": "Gas-metered sandbox VM for untrusted automation",
+        "status": "Rust",
+        "url": "https://github.com/hellpuffyt/halyard-vm",
+        "label": "source"
+      },
+      {
+        "slug": "tarn-lang",
+        "name": "tarn-lang",
+        "desc": "A small language for agent workflows",
+        "status": "Go",
+        "url": "https://github.com/hellpuffyt/tarn-lang",
+        "label": "source"
+      },
+      {
+        "slug": "spindrift",
+        "name": "spindrift",
+        "desc": "HTTP/1.1 server, from the RFC up",
+        "status": "Go",
+        "url": "https://github.com/hellpuffyt/spindrift",
+        "label": "source"
+      },
+      {
+        "slug": "modelharbor",
+        "name": "modelharbor",
+        "desc": "LLM provider routing with failover and cost",
+        "status": "TypeScript",
+        "url": "https://github.com/hellpuffyt/modelharbor",
+        "label": "source"
+      }
+    ]
+  }
 }

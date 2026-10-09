@@ -2,9 +2,11 @@
 // Usage: npm install && node fetch-fonts.mjs && node build-brand.mjs
 import fs from 'node:fs';
 import path from 'node:path';
+import { createRequire } from 'node:module';
 import { Resvg } from '@resvg/resvg-js';
 import { color as c, text, measure, markGroup, MARK, svgDoc } from './lib/brand.mjs';
 
+const require = createRequire(import.meta.url);
 const OUT = path.resolve('..', 'assets');
 fs.mkdirSync(OUT, { recursive: true });
 
@@ -118,15 +120,20 @@ const drawCSS = `
 @media (prefers-reduced-motion:reduce){.outline{display:none}.glow{opacity:0}}`;
 
 /* ---------- banner ---------- */
+// Tagline: "Building things / that should exist." with the last word in italic
+// and the emerald square as its full stop.
+export const TAGLINE = ['Building things', 'that should ', 'exist'];
+const TAGLINE_TEXT = 'Building things that should exist';
 function headline({ x, y1, y2, size }) {
-  const into = measure('serif', 'into ', size, -0.012);
-  const prod = measure('serifItalic', 'products', size, -0.012);
+  const [l1, lead, key] = TAGLINE;
+  const leadW = measure('serif', lead, size, -0.012);
+  const keyW = measure('serifItalic', key, size, -0.012);
   const dot = size * 0.085;
   return {
-    line1: text('serif', 'Engineering ideas', { x, y: y1, size, tracking: -0.012 }),
-    line2: text('serif', 'into ', { x, y: y2, size, tracking: -0.012 }) +
-      text('serifItalic', 'products', { x: x + into, y: y2, size, tracking: -0.012 }) +
-      `<rect x="${(x + into + prod + dot * 0.6).toFixed(2)}" y="${(y2 - dot).toFixed(2)}" width="${dot.toFixed(2)}" height="${dot.toFixed(2)}" fill="${c.emerald}"/>`,
+    line1: text('serif', l1, { x, y: y1, size, tracking: -0.012 }),
+    line2: text('serif', lead, { x, y: y2, size, tracking: -0.012 }) +
+      text('serifItalic', key, { x: x + leadW, y: y2, size, tracking: -0.012 }) +
+      `<rect x="${(x + leadW + keyW + dot * 0.6).toFixed(2)}" y="${(y2 - dot).toFixed(2)}" width="${dot.toFixed(2)}" height="${dot.toFixed(2)}" fill="${c.emerald}"/>`,
   };
 }
 
@@ -165,8 +172,8 @@ ${drawCSS}${reduce}` : '';
     construction({ x: 1088, y: 120, size: 360, animate });
   return svgDoc({
     w: W, h: H,
-    title: 'hellpuff — Engineering ideas into products',
-    desc: 'Banner with the hellpuff logo, the headline "Engineering ideas into products", and a construction drawing of the h mark.',
+    title: `hellpuff — ${TAGLINE_TEXT}`,
+    desc: `Banner with the hellpuff logo, the headline "${TAGLINE_TEXT}", and a construction drawing of the h mark.`,
     defs: glowDef + `<radialGradient id="heroWash" cx=".55" cy=".5" r=".6"><stop offset="0" stop-color="${c.emerald}" stop-opacity=".07"/><stop offset="1" stop-color="${c.emerald}" stop-opacity="0"/></radialGradient>`,
     style: css, body,
   });
@@ -205,7 +212,7 @@ function social() {
   const hl = headline({ x: M - 4, y1: 340, y2: 440, size: 96 });
   return svgDoc({
     w: W, h: H, title: 'hellpuff social preview',
-    desc: 'hellpuff logo with the headline "Engineering ideas into products" and the site address hellpuff.dev.',
+    desc: `hellpuff logo with the headline "${TAGLINE_TEXT}" and the site address hellpuff.dev.`,
     defs: glowDef + `<radialGradient id="wash" cx=".8" cy=".35" r=".55"><stop offset="0" stop-color="${c.emerald}" stop-opacity=".08"/><stop offset="1" stop-color="${c.emerald}" stop-opacity="0"/></radialGradient>`,
     body: `<rect width="${W}" height="${H}" fill="${c.ink}"/><rect width="${W}" height="${H}" fill="url(#wash)"/>` +
       lockup({ x: M - 20, y: 60, size: 80 }) + hl.line1 + hl.line2 +
@@ -220,11 +227,10 @@ png('hellpuff-social-preview.png', social(), 1280);
 
 /* ---------- section headers (dark + light, swapped with <picture>) ---------- */
 export const sections = [
-  ['about', '01', 'About'],
-  ['work', '02', 'Selected work'],
-  ['open-source', '03', 'Open source'],
-  ['stack', '04', 'Toolkit'],
-  ['focus', '05', 'Current focus'],
+  ['stack', '01', 'Toolkit'],
+  ['products', '02', 'Products'],
+  ['systems', '03', 'Systems'],
+  ['focus', '04', 'Now'],
 ];
 for (const [slug, num, title] of sections) {
   for (const [variant, fg, rule, accent] of [['dark', c.paper, c.line, c.emerald], ['light', c.inkText, c.lineLight, c.forest]]) {
@@ -291,8 +297,8 @@ function typePlate() {
     w: W, h: H, title: 'hellpuff typography', desc: 'Instrument Serif for display, Geist for text and the wordmark, Geist Mono for labels.',
     body: `<rect width="${W}" height="${H}" rx="28" fill="${c.ink}"/>` +
       label('DISPLAY  —  INSTRUMENT SERIF', 84) +
-      text('serif', 'Engineering ideas into ', { x: M - 3, y: 186, size: 88, tracking: -0.012 }) +
-      text('serifItalic', 'products', { x: M - 3 + measure('serif', 'Engineering ideas into ', 88, -0.012), y: 186, size: 88, tracking: -0.012 }) +
+      text('serif', 'Building things that should ', { x: M - 3, y: 186, size: 88, tracking: -0.012 }) +
+      text('serifItalic', 'exist', { x: M - 3 + measure('serif', 'Building things that should ', 88, -0.012), y: 186, size: 88, tracking: -0.012 }) +
       `<path d="M${M} 236H${W - M}" stroke="${c.line}"/>` +
       label('TEXT + WORDMARK  —  GEIST', 284) +
       text('sansMedium', 'hellpuff', { x: M - 2, y: 352, size: 56, tracking: -0.035 }) +
@@ -303,5 +309,81 @@ function typePlate() {
   });
 }
 write('brand-type.svg', typePlate());
+
+/* ---------- toolkit strip (dark + light) ---------- */
+const cfg = JSON.parse(fs.readFileSync('profile.json', 'utf8'));
+const iconPath = (slug) =>
+  fs.readFileSync(require.resolve(`simple-icons/icons/${slug}.svg`), 'utf8').match(/ d="([^"]+)"/)[1];
+function stackStrip(fg, muted) {
+  const W = 680, perRow = 7, colW = W / perRow, rowH = 92;
+  const rows = Math.ceil(cfg.stack.length / perRow);
+  const body = cfg.stack.map(([slug, label], i) => {
+    const cx = (i % perRow) * colW + colW / 2, top = Math.floor(i / perRow) * rowH + 12;
+    return `<path fill="${fg}" transform="translate(${(cx - 14).toFixed(1)} ${top}) scale(1.1667)" d="${iconPath(slug)}"/>` +
+      text('mono', label, { x: cx, y: top + 60, size: 15, tracking: 0, anchor: 'middle', fill: muted });
+  }).join('');
+  return svgDoc({ w: W, h: rows * rowH, title: 'Toolkit', desc: cfg.stack.map(([, l]) => l).join(', '), body });
+}
+write('stack-dark.svg', stackStrip(c.silver, c.steel));
+write('stack-light.svg', stackStrip(c.inkMuted, '#878D8A'));
+
+/* ---------- project index rows ---------- */
+// Each row is its own image so each can link to its destination. Rows are dark
+// cards on purpose: GitHub wraps <picture> in its own link, so a linked row
+// cannot swap themes.
+const STATUS = {
+  'Commercial': c.emerald, 'Deployed': c.emerald, 'Working build': c.silver,
+  'In development': c.champagne, 'Prototype': c.steel,
+};
+function fit(fontName, str, size, max, tracking = 0) {
+  const w = measure(fontName, str, size, tracking);
+  return w > max ? size * (max / w) : size;
+}
+function indexRow(item, n) {
+  const W = 680, H = 100, R = W - 24, L = 62;
+  const tone = STATUS[item.status] || c.emerald; // repositories show their language in emerald
+  const statusLabel = item.status.toUpperCase();
+  const dest = item.label.toUpperCase();
+  const sw = measure('mono', statusLabel, 14, 0.1);
+  const dw = measure('mono', dest, 13, 0.08);
+  const textMax = R - Math.max(sw + 20, dw + 24) - 28 - L;
+  const nameSize = fit('serif', item.name, 36, textMax, -0.01);
+  const descSize = fit('sans', item.desc, 19, textMax);
+  return svgDoc({
+    w: W, h: H, title: item.name, desc: `${item.name}: ${item.desc}. ${item.status}. ${item.label}.`,
+    body: `<rect width="${W}" height="${H}" rx="14" fill="${c.ink}"/>` +
+      `<rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="13.5" stroke="${c.line}"/>` +
+      `<rect x="0" y="34" width="2" height="32" fill="${tone}"/>` +
+      text('mono', String(n).padStart(2, '0'), { x: 22, y: 55, size: 14, tracking: 0.04, fill: c.steel }) +
+      text('serif', item.name, { x: L, y: 49, size: nameSize, tracking: -0.01 }) +
+      text('sans', item.desc, { x: L, y: 78, size: descSize, fill: c.silver }) +
+      `<rect x="${(R - sw - 17).toFixed(1)}" y="34" width="8" height="8" fill="${tone}"/>` +
+      text('mono', statusLabel, { x: R, y: 43, size: 14, tracking: 0.1, anchor: 'end', fill: c.paper }) +
+      text('mono', dest, { x: R - 19, y: 74, size: 13, tracking: 0.08, anchor: 'end', fill: c.steel }) +
+      `<path d="M${R - 12} 73l9-9m-7 0h7v7" stroke="${c.steel}" stroke-width="1.5"/>` +
+      `<path d="M${(R - 19 - dw).toFixed(1)} 80.5H${R - 19}" stroke="${c.line}"/>`,
+  });
+}
+fs.mkdirSync(path.join(OUT, 'work'), { recursive: true });
+for (const f of fs.readdirSync(path.join(OUT, 'work'))) fs.unlinkSync(path.join(OUT, 'work', f));
+let n = 0;
+const blocks = {};
+for (const [group, items] of Object.entries(cfg.work)) {
+  blocks[group] = items.map((item) => {
+    write(`work/${item.slug}.svg`, indexRow(item, ++n));
+    return `<a href="${item.url}"><img src="assets/work/${item.slug}.svg" width="100%" alt="${`${item.name} — ${item.desc}. ${item.status}.`.replace(/&/g, '&amp;')}"></a>`;
+  }).join('<br>\n');
+}
+
+/* ---------- README blocks ---------- */
+const readmePath = path.resolve('..', 'README.md');
+if (fs.existsSync(readmePath)) {
+  let readme = fs.readFileSync(readmePath, 'utf8');
+  for (const [group, html] of Object.entries(blocks)) {
+    const re = new RegExp(`<!-- work:${group}:start -->[\\s\\S]*<!-- work:${group}:end -->`);
+    readme = readme.replace(re, `<!-- work:${group}:start -->\n${html}\n<!-- work:${group}:end -->`);
+  }
+  fs.writeFileSync(readmePath, readme);
+}
 
 console.log(`wrote ${written.length} files:\n  ` + written.join('\n  '));

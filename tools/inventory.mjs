@@ -1,21 +1,17 @@
 // Regenerates the public project inventory from the GitHub API.
 //
-//   node inventory.mjs            -> PROJECTS.md, assets/languages-*.svg,
-//                                    assets/icons/*.svg, README toolkit block
+//   node inventory.mjs            -> PROJECTS.md, assets/languages-*.svg
 //
 // Only public repositories are read (GET /users/:user/repos returns public
 // repositories, and private ones are filtered out again defensively).
 // A token is optional and only raises the rate limit: GITHUB_TOKEN, else
 // `gh auth token` if the GitHub CLI is installed. Output is sorted and carries
 // no timestamps, so a re-run with no upstream changes produces no diff.
-// README content outside the <!-- toolkit:start/end --> markers is never touched.
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
-import { createRequire } from 'node:module';
 import { color as c, text, measure, svgDoc } from './lib/brand.mjs';
 
-const require = createRequire(import.meta.url);
 const ROOT = path.resolve('..');
 const cfg = JSON.parse(fs.readFileSync('profile.json', 'utf8'));
 const USER = cfg.user;
@@ -142,29 +138,4 @@ for (const [variant, fg, muted, accent, ramp] of [
   }));
 }
 
-/* ---------- toolkit icons + README block ---------- */
-const ICON_FILL = '#7D8480'; // neutral grey, legible on GitHub light and dark themes
-fs.mkdirSync(path.join(ROOT, 'assets', 'icons'), { recursive: true });
-const icon = (slug) => {
-  if (!slug) return '';
-  const src = fs.readFileSync(require.resolve(`simple-icons/icons/${slug}.svg`), 'utf8');
-  const d = src.match(/ d="([^"]+)"/)[1];
-  fs.writeFileSync(path.join(ROOT, 'assets', 'icons', `${slug}.svg`),
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="${ICON_FILL}" d="${d}"/></svg>\n`);
-  return `<img src="assets/icons/${slug}.svg" width="14" height="14" alt="">&nbsp;`;
-};
-const rows = cfg.toolkit.map(({ group, primary, also }) => {
-  const main = primary.map(([slug, label]) => `${icon(slug)}${label}`).join(' &nbsp;&nbsp; ');
-  const extra = also.length ? `<br><sub>Also &nbsp;${also.map(([, label]) => label).join(' · ')}</sub>` : '';
-  return `<tr><td><sub><b>${group.toUpperCase()}</b></sub></td><td>${main}${extra}</td></tr>`;
-});
-const block = `<!-- toolkit:start -->\n<table>\n${rows.join('\n')}\n</table>\n<!-- toolkit:end -->`;
-const readmePath = path.join(ROOT, 'README.md');
-const markers = /<!-- toolkit:start -->[\s\S]*<!-- toolkit:end -->/;
-if (fs.existsSync(readmePath) && markers.test(fs.readFileSync(readmePath, 'utf8'))) {
-  fs.writeFileSync(readmePath, fs.readFileSync(readmePath, 'utf8').replace(markers, block));
-  console.log('README toolkit block updated');
-} else {
-  console.log('README has no toolkit markers; block not inserted');
-}
 console.log(`languages: ${ranked.map(([k]) => k).join(', ')}`);

@@ -65,7 +65,7 @@ frame, and the README swaps in the static banner through `<picture>` for visitor
 cd tools
 npm install
 node fetch-fonts.mjs     # Instrument Serif from google/fonts
-npm run brand            # every SVG and PNG in assets/
-npm run inventory        # PROJECTS.md, the language strip and the README toolkit block
+npm run brand            # every SVG and PNG in assets/, plus the README project index
+npm run inventory        # PROJECTS.md and the language strip
 npm run check            # validates SVGs, local links and image references
 ```

@@ -108,10 +108,12 @@ export function markGroup({ fg = color.paper, accent = color.emerald, x = 0, y =
     `</g>`;
 }
 
+const xml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+
 export function svgDoc({ w, h, title, desc, body, defs = '', style = '' }) {
-  const id = title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  const id = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" fill="none" role="img" aria-labelledby="${id}-title ${id}-desc">` +
-    `<title id="${id}-title">${title}</title><desc id="${id}-desc">${desc}</desc>` +
+    `<title id="${id}-title">${xml(title)}</title><desc id="${id}-desc">${xml(desc)}</desc>` +
     (style ? `<style>${style}</style>` : '') +
     (defs ? `<defs>${defs}</defs>` : '') +
     body + `</svg>\n`;
