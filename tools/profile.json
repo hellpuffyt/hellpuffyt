@@ -1,0 +1,286 @@
+{
+  "$comment": "Curation for tools/inventory.mjs. Public repositories only. Descriptions come from each repository's own GitHub description; notes here override or annotate them.",
+  "user": "hellpuffyt",
+  "exclude": [
+    "hellpuffyt"
+  ],
+  "notes": {
+    "vercel-slm": "Prototype of the Serverless Log Monitoring & Threat Alert System.",
+    "ai-detector": "Builds on a third-party dataset and model credited in its README.",
+    "ml-tradingbot": "Early learning project.",
+    "puffer-tracker": "Early full-stack project."
+  },
+  "categories": [
+    {
+      "title": "Languages, Compilers & Runtimes",
+      "repos": [
+        "bellows-compiler",
+        "emberline-engine",
+        "halyard-vm",
+        "tarn-lang",
+        "tesseradb"
+      ],
+      "blurb": "Systems built from first principles: compilers, interpreters, virtual machines, storage engines."
+    },
+    {
+      "title": "Security & Infrastructure",
+      "repos": [
+        "certwatch",
+        "confaudit",
+        "configsync",
+        "dnsdrift",
+        "dotenv-doctor",
+        "evtlog-triage",
+        "headerscan",
+        "k8s-lint",
+        "packetlens",
+        "pii-redactor",
+        "portwatch",
+        "ratelimit-rs",
+        "shadowlab",
+        "spindrift",
+        "statuscraft",
+        "tlsprobe",
+        "tokenpit",
+        "vercel-slm",
+        "win-audit"
+      ],
+      "blurb": "Defensive tooling for configuration, transport security, logs and networks."
+    },
+    {
+      "title": "AI & Data",
+      "repos": [
+        "csvsurgeon",
+        "dataset-profiler",
+        "doc-classifier",
+        "embed-explorer",
+        "feature-drift",
+        "img-dedupe",
+        "label-audit",
+        "llm-cost-ledger",
+        "model-bench",
+        "modelharbor",
+        "notebook-lint",
+        "pdf-tables",
+        "promptdiff",
+        "rag-eval",
+        "receipt-ocr",
+        "schemaevo",
+        "timeseries-anomaly",
+        "whisper-index"
+      ],
+      "blurb": "Evaluation, benchmarking and data-quality tools for ML and LLM work."
+    },
+    {
+      "title": "Developer Tools & Automation",
+      "repos": [
+        "a11y-sweep",
+        "apiary-mock",
+        "bootstrap-dev",
+        "bundle-forensics",
+        "changelog-forge",
+        "cron-explain",
+        "docatlas",
+        "fdupe",
+        "hexatlas",
+        "imgpipe",
+        "logtail-rs",
+        "repograph",
+        "schema-infer",
+        "sql-migrate-lint",
+        "structdiff",
+        "tsconfig-doctor",
+        "waterfall-lens",
+        "webhook-lens"
+      ],
+      "blurb": "Small, sharp tools for builds, configs, APIs and documentation."
+    },
+    {
+      "title": "Early work",
+      "repos": [
+        "ai-detector",
+        "ml-tradingbot",
+        "puffer-tracker"
+      ],
+      "blurb": "Older experiments, kept public for context."
+    }
+  ],
+  "toolkit": [
+    {
+      "group": "Languages",
+      "primary": [
+        [
+          "typescript",
+          "TypeScript"
+        ],
+        [
+          "python",
+          "Python"
+        ],
+        [
+          "rust",
+          "Rust"
+        ],
+        [
+          "go",
+          "Go"
+        ]
+      ],
+      "also": [
+        [
+          "javascript",
+          "JavaScript"
+        ],
+        [
+          "openjdk",
+          "Java"
+        ],
+        [
+          "cplusplus",
+          "C++"
+        ],
+        [
+          "dotnet",
+          "C#"
+        ],
+        [
+          null,
+          "SQL"
+        ]
+      ]
+    },
+    {
+      "group": "Interface",
+      "primary": [
+        [
+          "react",
+          "React"
+        ],
+        [
+          "nextdotjs",
+          "Next.js"
+        ],
+        [
+          "tailwindcss",
+          "Tailwind CSS"
+        ],
+        [
+          "vite",
+          "Vite"
+        ]
+      ],
+      "also": [
+        [
+          "expo",
+          "Expo / React Native"
+        ],
+        [
+          "tauri",
+          "Tauri"
+        ],
+        [
+          "threedotjs",
+          "three.js"
+        ]
+      ]
+    },
+    {
+      "group": "Services",
+      "primary": [
+        [
+          "nodedotjs",
+          "Node.js"
+        ],
+        [
+          "nestjs",
+          "NestJS"
+        ],
+        [
+          "fastapi",
+          "FastAPI"
+        ],
+        [
+          "express",
+          "Express"
+        ]
+      ],
+      "also": [
+        [
+          "socketdotio",
+          "Socket.IO"
+        ]
+      ]
+    },
+    {
+      "group": "Data",
+      "primary": [
+        [
+          "postgresql",
+          "PostgreSQL"
+        ],
+        [
+          "prisma",
+          "Prisma"
+        ],
+        [
+          "sqlalchemy",
+          "SQLAlchemy"
+        ],
+        [
+          "redis",
+          "Redis"
+        ]
+      ],
+      "also": []
+    },
+    {
+      "group": "Delivery",
+      "primary": [
+        [
+          "docker",
+          "Docker"
+        ],
+        [
+          "githubactions",
+          "GitHub Actions"
+        ],
+        [
+          "vercel",
+          "Vercel"
+        ],
+        [
+          "linux",
+          "Linux"
+        ]
+      ],
+      "also": [
+        [
+          "cloudflare",
+          "Cloudflare"
+        ]
+      ]
+    },
+    {
+      "group": "Quality",
+      "primary": [
+        [
+          "vitest",
+          "Vitest"
+        ],
+        [
+          "pytest",
+          "pytest"
+        ],
+        [
+          null,
+          "Playwright"
+        ],
+        [
+          null,
+          "cargo test"
+        ]
+      ],
+      "also": []
+    }
+  ]
+}
