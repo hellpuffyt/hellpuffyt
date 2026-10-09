@@ -194,8 +194,8 @@
         "name": "DataAccommodation",
         "desc": "Hotel operating system, PMS to guest portal",
         "status": "Working build",
-        "url": "https://dataaccomodation.com",
-        "label": "dataaccomodation.com"
+        "url": "https://dataaccommodation.com",
+        "label": "dataaccommodation.com"
       },
       {
         "slug": "dataitemize",

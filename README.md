@@ -36,7 +36,7 @@
 <a href="https://datajewellers.com"><img src="assets/work/datajewellers.svg" width="100%" alt="DataJewellers — Jewellery ERP and billing for Nepal. Commercial."></a><br>
 <a href="https://datarestro.com"><img src="assets/work/datarestro.svg" width="100%" alt="DataRestro — Restaurant operating system. Working build."></a><br>
 <a href="https://dataudaan.com"><img src="assets/work/dataudaan.svg" width="100%" alt="DataUdaan — Flights, hotels and buses behind one supplier layer. In development."></a><br>
-<a href="https://dataaccomodation.com"><img src="assets/work/dataaccommodation.svg" width="100%" alt="DataAccommodation — Hotel operating system, PMS to guest portal. Working build."></a><br>
+<a href="https://dataaccommodation.com"><img src="assets/work/dataaccommodation.svg" width="100%" alt="DataAccommodation — Hotel operating system, PMS to guest portal. Working build."></a><br>
 <a href="https://www.hellpuff.dev/work/dataitemize"><img src="assets/work/dataitemize.svg" width="100%" alt="DataItemize — Configurable inventory on an immutable ledger. Working build."></a><br>
 <a href="https://www.hellpuff.dev/work/timetravel"><img src="assets/work/timetravel.svg" width="100%" alt="TimeTravel — B2B airline ticketing for travel agencies. Commercial."></a><br>
 <a href="https://www.sitashreejewellers.com"><img src="assets/work/sita-shree.svg" width="100%" alt="Sita Shree Jewellers — Storefront and billing ERP for a client jeweller. Deployed."></a>
