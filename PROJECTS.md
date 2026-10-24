@@ -109,6 +109,19 @@ Older experiments, kept public for context.
 | [ml-tradingbot](https://github.com/hellpuffyt/ml-tradingbot) | AI-powered trading bot with FinBERT sentiment analysis <sub>Early learning project.</sub> | Python |
 | [puffer-tracker](https://github.com/hellpuffyt/puffer-tracker) | Puffer is a full-stack stock tracking and market analysis application designed to help users monitor stocks, analyze market trends, and manage financial data in real time. Built with a modern tech stack, Puffer focuses on performance, scalability, and clean architecture while keeping the user experience simple and intuitive. <sub>Early full-stack project.</sub> | TypeScript |
 
+## Not yet curated
+
+New public repositories that have not been placed in a category in `tools/profile.json`.
+
+| Repository | What it does | Language |
+| :-- | :-- | :-- |
+| [AST-StateFuzzer](https://github.com/hellpuffyt/AST-StateFuzzer) | Structure-aware fuzzer for a small typed language: AST generation and mutation, differential oracles, grammar-aware minimization, reproducible seeds | Rust |
+| [ArchitectFlow](https://github.com/hellpuffyt/ArchitectFlow) | Visual software-design studio: editable architecture graph, UI/UX design, validation engine and implementation-prompt generation from the saved design | Python |
+| [ChaosProxy-L7](https://github.com/hellpuffyt/ChaosProxy-L7) | Loopback-first Layer 7 fault-injection proxy: HTTP/1.1 + h2c faults, protocol-aware PostgreSQL scenarios, sandboxed WebAssembly matchers | Rust |
+| [Deterministic-TimeMachine](https://github.com/hellpuffyt/Deterministic-TimeMachine) | Make flaky tests reproducible: record nondeterministic inputs (time, randomness, fs, env, network) and replay them exactly, with divergence diagnostics and trace minimization | Rust |
+| [Titan-HFT](https://github.com/hellpuffyt/Titan-HFT) | Deterministic price-time order-matching engine and lock-free SPSC queue in Rust — an educational, measured, tested low-latency systems project | Rust |
+| [eBPF-KernelTrace-MCP](https://github.com/hellpuffyt/eBPF-KernelTrace-MCP) | Permission-controlled Linux kernel telemetry (Aya eBPF) for MCP-compatible AI assistants — with a deterministic synthetic mode that runs anywhere | Rust |
+
 ---
 
-<sub>63 public repositories. Regenerate with `cd tools && npm run inventory`.</sub>
+<sub>69 public repositories. Regenerate with `cd tools && npm run inventory`.</sub>
