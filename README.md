@@ -37,42 +37,42 @@
 <tr>
 <td width="50%" valign="top">
 <a href="https://www.hellpuff.dev/work/architectflow"><img src="assets/shots/architectflow.webp" width="100%" alt="ArchitectFlow: Zoomed ArchitectFlow canvas showing labelled service connections"></a><br>
-<b>ArchitectFlow</b> &nbsp;<sub>EXPERIMENTAL</sub><br>
-<sub>Design a system&#x27;s architecture, data model, API and UI as one versioned document, check it with deterministic rules, and generate an implementation prompt from the exact saved revision.</sub><br>
+<b>ArchitectFlow</b><br>
+<sub>Versioned system-design workspace · experimental</sub><br>
 <sub><a href="https://www.hellpuff.dev/work/architectflow">Case study</a> &nbsp;·&nbsp; <a href="https://github.com/hellpuffyt/ArchitectFlow">Source</a></sub>
 </td>
 <td width="50%" valign="top">
 <a href="https://www.hellpuff.dev/work/statuscraft"><img src="assets/shots/statuscraft.webp" width="100%" alt="Statuscraft: statuscraft status page, dark theme, with uptime bars for four services"></a><br>
-<b>Statuscraft</b> &nbsp;<sub>IN DEVELOPMENT</sub><br>
-<sub>A status page generator that refuses to lie: every status, badge and incident is computed from an append-only log of real synthetic-check results.</sub><br>
+<b>Statuscraft</b><br>
+<sub>Honest status pages · in development</sub><br>
 <sub><a href="https://www.hellpuff.dev/work/statuscraft">Case study</a> &nbsp;·&nbsp; <a href="https://github.com/hellpuffyt/statuscraft">Source</a></sub>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 <a href="https://www.hellpuff.dev/work/repograph"><img src="assets/shots/repograph.webp" width="100%" alt="RepoGraph: repograph force-directed dependency graph of its own repository"></a><br>
-<b>RepoGraph</b> &nbsp;<sub>IN DEVELOPMENT</sub><br>
-<sub>An interactive dependency map for TypeScript and JavaScript codebases: import cycles, dead exports, API surface and click-to-highlight blast radius in one HTML file.</sub><br>
+<b>RepoGraph</b><br>
+<sub>Codebase architecture map · in development</sub><br>
 <sub><a href="https://www.hellpuff.dev/work/repograph">Case study</a> &nbsp;·&nbsp; <a href="https://github.com/hellpuffyt/repograph">Source</a></sub>
 </td>
 <td width="50%" valign="top">
 <a href="https://www.hellpuff.dev/work/waterfall-lens"><img src="assets/shots/waterfall-lens.webp" width="100%" alt="Waterfall Lens: waterfall-lens report with summary metrics and first-paint explanation"></a><br>
-<b>Waterfall Lens</b> &nbsp;<sub>IN DEVELOPMENT</sub><br>
-<sub>Turns a HAR capture into an answer: the critical rendering chain, connection queuing and third-party weight, explained in plain English beside an interactive waterfall.</sub><br>
+<b>Waterfall Lens</b><br>
+<sub>Page-load forensics · in development</sub><br>
 <sub><a href="https://www.hellpuff.dev/work/waterfall-lens">Case study</a> &nbsp;·&nbsp; <a href="https://github.com/hellpuffyt/waterfall-lens">Source</a></sub>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 <a href="https://www.hellpuff.dev/work/modelharbor"><img src="assets/shots/modelharbor.webp" width="100%" alt="ModelHarbor: ModelHarbor dashboard with provider health cards, routing panel and cost totals"></a><br>
-<b>ModelHarbor</b> &nbsp;<sub>IN DEVELOPMENT</sub><br>
-<sub>A self-hosted dashboard for every configured LLM provider: live health and latency per model, task-aware routing with live failover, and a usage-cost ledger.</sub><br>
+<b>ModelHarbor</b><br>
+<sub>LLM provider control center · in development</sub><br>
 <sub><a href="https://www.hellpuff.dev/work/modelharbor">Case study</a> &nbsp;·&nbsp; <a href="https://github.com/hellpuffyt/modelharbor">Source</a></sub>
 </td>
 <td width="50%" valign="top">
 <a href="https://www.hellpuff.dev/work/emberline-engine"><img src="assets/shots/emberline-engine.webp" width="100%" alt="Emberline: Ember Run pixel platformer level rendered by the Emberline engine"></a><br>
-<b>Emberline</b> &nbsp;<sub>RESEARCH</sub><br>
-<sub>A 2D game engine where time is a data structure: fixed-step deterministic simulation, hold-to-rewind, replays and save files that are verifiable input logs.</sub><br>
+<b>Emberline</b><br>
+<sub>Rewindable 2D game engine · research</sub><br>
 <sub><a href="https://www.hellpuff.dev/work/emberline-engine">Case study</a> &nbsp;·&nbsp; <a href="https://github.com/hellpuffyt/emberline-engine">Source</a></sub>
 </td>
 </tr>
