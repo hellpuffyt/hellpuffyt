@@ -18,7 +18,9 @@
         "emberline-engine",
         "halyard-vm",
         "tarn-lang",
-        "tesseradb"
+        "tesseradb",
+        "Deterministic-TimeMachine",
+        "AST-StateFuzzer"
       ],
       "blurb": "Systems built from first principles: compilers, interpreters, virtual machines, storage engines."
     },
@@ -43,7 +45,10 @@
         "tlsprobe",
         "tokenpit",
         "vercel-slm",
-        "win-audit"
+        "win-audit",
+        "eBPF-KernelTrace-MCP",
+        "ChaosProxy-L7",
+        "Titan-HFT"
       ],
       "blurb": "Defensive tooling for configuration, transport security, logs and networks."
     },
@@ -91,7 +96,8 @@
         "structdiff",
         "tsconfig-doctor",
         "waterfall-lens",
-        "webhook-lens"
+        "webhook-lens",
+        "ArchitectFlow"
       ],
       "blurb": "Small, sharp tools for builds, configs, APIs and documentation."
     },
@@ -224,19 +230,35 @@
     ],
     "systems": [
       {
-        "slug": "sugar-os",
-        "name": "Sugar OS",
-        "desc": "Personal AI operating system, written in Rust",
-        "status": "In development",
-        "url": "https://www.hellpuff.dev/work/sugar-os",
-        "label": "case study"
-      },
-      {
         "slug": "slm",
         "name": "Serverless Log Monitoring & Threat Alert System",
         "desc": "Rule-based detection, brute-force windows, webhook alerts",
         "status": "Prototype",
         "url": "https://github.com/hellpuffyt/vercel-slm",
+        "label": "source"
+      },
+      {
+        "slug": "ebpf-kerneltrace-mcp",
+        "name": "eBPF-KernelTrace-MCP",
+        "desc": "Kernel telemetry for AI assistants",
+        "status": "Rust",
+        "url": "https://github.com/hellpuffyt/eBPF-KernelTrace-MCP",
+        "label": "source"
+      },
+      {
+        "slug": "titan-hft",
+        "name": "Titan-HFT",
+        "desc": "Deterministic matching engine",
+        "status": "Rust",
+        "url": "https://github.com/hellpuffyt/Titan-HFT",
+        "label": "source"
+      },
+      {
+        "slug": "chaosproxy-l7",
+        "name": "ChaosProxy-L7",
+        "desc": "Layer-7 fault-injection proxy",
+        "status": "Rust",
+        "url": "https://github.com/hellpuffyt/ChaosProxy-L7",
         "label": "source"
       },
       {
@@ -282,7 +304,7 @@
       {
         "slug": "modelharbor",
         "name": "modelharbor",
-        "desc": "LLM provider routing with failover and cost",
+        "desc": "LLM provider control center",
         "status": "TypeScript",
         "url": "https://github.com/hellpuffyt/modelharbor",
         "label": "source"

@@ -85,27 +85,44 @@ export function text(fontName, str, opts = {}) {
   return `<path fill="${fill}" ${attrs} d="${textPath(fontName, str, rest)}"/>`;
 }
 
-/*
- * The mark: a geometric lowercase h on a 4-unit grid inside a 96 box.
- * Stem and arch share one 12-unit stroke; the emerald square ("the lit pixel")
- * sits in the leg's column at ascender height, so the glyph and the pixel
- * together describe a closed rectangle: structure plus the one idea that ships.
- */
-export const MARK = {
-  box: 96,
-  // Single outline of the whole glyph. Outer arch r=20 centred on x=48,
-  // inner counter r=8, both springing at y=56.
-  outline: 'M28 16H40V37.67A20 20 0 0 1 68 56V80H56V56A8 8 0 0 0 40 56V80H28Z',
-  pixel: { x: 56, y: 16, w: 12, h: 12 },
-};
+import { EAGLE, WORD, POTRACE_TRANSFORM } from './logo.mjs';
 
-export function markGroup({ fg = color.paper, accent = color.emerald, x = 0, y = 0, size = 96, attrs = '' } = {}) {
-  const s = r(size / MARK.box);
-  const p = MARK.pixel;
+/*
+ * The mark: the owner's eagle (tools/lib/logo.mjs), drawn in one colour.
+ * `size` is the rendered width; height follows the artwork's proportions.
+ */
+export const MARK = { w: EAGLE.w, h: EAGLE.h, ratio: EAGLE.h / EAGLE.w };
+
+function traced(art, { fg, x, y, width, attrs = '' }) {
+  const s = +(width / art.w).toFixed(6); // full precision: art boxes are ~2500 units wide
   return `<g transform="translate(${r(x)} ${r(y)}) scale(${s})" ${attrs}>` +
-    `<path fill="${fg}" d="${MARK.outline}"/>` +
-    `<rect fill="${accent}" x="${p.x}" y="${p.y}" width="${p.w}" height="${p.h}"/>` +
-    `</g>`;
+    `<path fill="${fg}" transform="${POTRACE_TRANSFORM(art.h)}" d="${art.d}"/></g>`;
+}
+
+export function markGroup({ fg = color.paper, x = 0, y = 0, size = 96, attrs = '' } = {}) {
+  return traced(EAGLE, { fg, x, y, width: size, attrs });
+}
+
+/** The supplied HELLPUFF wordmark (spaced capitals), `size` = rendered width. */
+export const WORDMARK = { ratio: WORD.h / WORD.w };
+export function wordmarkGroup({ fg = color.paper, x = 0, y = 0, size = 320, attrs = '' } = {}) {
+  return traced(WORD, { fg, x, y, width: size, attrs });
+}
+
+/**
+ * The supplied lockup: eagle above the wordmark, spaced exactly as in the original artwork.
+ * Both traced crops carry the same 4 px padding, so offsets are measured crop to crop in the
+ * 500 px source: eagle crop 208 px wide (x 146, bottom 314), wordmark crop 186 px (x 158, top 342).
+ */
+const LOCKUP = { word: 186 / 208, dx: 12 / 208, gap: 28 / 208 };
+export function lockupStacked({ fg = color.paper, x = 0, y = 0, width = 200 } = {}) {
+  const eh = width * MARK.ratio;
+  const ww = width * LOCKUP.word;
+  const wy = y + eh + width * LOCKUP.gap;
+  return {
+    w: width, h: wy - y + ww * WORDMARK.ratio,
+    body: markGroup({ fg, x, y, size: width }) + wordmarkGroup({ fg, x: x + width * LOCKUP.dx, y: wy, size: ww }),
+  };
 }
 
 const xml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
