@@ -22,7 +22,7 @@ Every entry below points to the work it comes from. Nothing here is a rating, an
 | :-- | :-- | :-- |
 | TypeScript | Built · Shipped | [modelharbor](https://github.com/hellpuffyt/modelharbor), [tsconfig-doctor](https://github.com/hellpuffyt/tsconfig-doctor), [bundle-forensics](https://github.com/hellpuffyt/bundle-forensics), [emberline-engine](https://github.com/hellpuffyt/emberline-engine); DataJewellers, DataRestro, TimeTravel |
 | Python | Built · Shipped | [model-bench](https://github.com/hellpuffyt/model-bench), [dataset-profiler](https://github.com/hellpuffyt/dataset-profiler), [shadowlab](https://github.com/hellpuffyt/shadowlab), [rag-eval](https://github.com/hellpuffyt/rag-eval); DataUdaan, DataItemize |
-| Rust | Built · Shipped | [bellows-compiler](https://github.com/hellpuffyt/bellows-compiler), [tesseradb](https://github.com/hellpuffyt/tesseradb), [halyard-vm](https://github.com/hellpuffyt/halyard-vm), [packetlens](https://github.com/hellpuffyt/packetlens); Sugar OS |
+| Rust | Built · Shipped | [bellows-compiler](https://github.com/hellpuffyt/bellows-compiler), [tesseradb](https://github.com/hellpuffyt/tesseradb), [halyard-vm](https://github.com/hellpuffyt/halyard-vm), [packetlens](https://github.com/hellpuffyt/packetlens)|
 | Go | Built | [tarn-lang](https://github.com/hellpuffyt/tarn-lang), [spindrift](https://github.com/hellpuffyt/spindrift), [certwatch](https://github.com/hellpuffyt/certwatch), [dnsdrift](https://github.com/hellpuffyt/dnsdrift) |
 | SQL | Built · Shipped | [tesseradb](https://github.com/hellpuffyt/tesseradb) (SQL engine), [sql-migrate-lint](https://github.com/hellpuffyt/sql-migrate-lint); PostgreSQL in every commercial product |
 | JavaScript | Built · Prototype | [vercel-slm](https://github.com/hellpuffyt/vercel-slm), early projects; underneath all TypeScript work |
@@ -40,7 +40,7 @@ Every entry below points to the work it comes from. Nothing here is a rating, an
 | Tailwind CSS | Shipped | DataJewellers, DataItemize, TimeTravel, hellpuff.dev |
 | Vite | Built · Shipped | The React tools above; DataJewellers |
 | Expo / React Native | Shipped | Mobile clients for DataJewellers, DataRestro and DataUdaan |
-| Tauri | Shipped | DataJewellers desktop client, Sugar OS |
+| Tauri | Shipped | DataJewellers desktop client |
 | three.js | Shipped | hellpuff.dev, Sita Shree Jewellers storefront |
 | Accessibility | Built | [a11y-sweep](https://github.com/hellpuffyt/a11y-sweep) |
 | Offline-first PWAs | Shipped | DataJewellers |
@@ -96,7 +96,7 @@ Every entry below points to the work it comes from. Nothing here is a rating, an
 | Configuration hardening | Built | [confaudit](https://github.com/hellpuffyt/confaudit), [k8s-lint](https://github.com/hellpuffyt/k8s-lint), [win-audit](https://github.com/hellpuffyt/win-audit) |
 | Detection and monitoring | Built · Prototype | [evtlog-triage](https://github.com/hellpuffyt/evtlog-triage), [logtail-rs](https://github.com/hellpuffyt/logtail-rs), [packetlens](https://github.com/hellpuffyt/packetlens), [vercel-slm](https://github.com/hellpuffyt/vercel-slm) |
 | Secrets and personal data | Built | [dotenv-doctor](https://github.com/hellpuffyt/dotenv-doctor), [notebook-lint](https://github.com/hellpuffyt/notebook-lint), [pii-redactor](https://github.com/hellpuffyt/pii-redactor) |
-| Sandboxing and capabilities | Built | [halyard-vm](https://github.com/hellpuffyt/halyard-vm), [tarn-lang](https://github.com/hellpuffyt/tarn-lang); Cedar policy in Sugar OS |
+| Sandboxing and capabilities | Built | [halyard-vm](https://github.com/hellpuffyt/halyard-vm), [tarn-lang](https://github.com/hellpuffyt/tarn-lang) |
 | Rate limiting | Built | [ratelimit-rs](https://github.com/hellpuffyt/ratelimit-rs) |
 
 ## AI and automation
@@ -107,7 +107,6 @@ Every entry below points to the work it comes from. Nothing here is a rating, an
 | Local model benchmarking | Built | [model-bench](https://github.com/hellpuffyt/model-bench) |
 | Evaluation (prompts, RAG) | Built | [promptdiff](https://github.com/hellpuffyt/promptdiff), [rag-eval](https://github.com/hellpuffyt/rag-eval) |
 | LLM cost tracking | Built | [llm-cost-ledger](https://github.com/hellpuffyt/llm-cost-ledger) |
-| Agent orchestration | Exploring | Sugar OS: policy-gated agents and a durable workflow engine, in development |
 | Applied ML without frameworks | Built | [doc-classifier](https://github.com/hellpuffyt/doc-classifier), [timeseries-anomaly](https://github.com/hellpuffyt/timeseries-anomaly), [embed-explorer](https://github.com/hellpuffyt/embed-explorer) |
 | Document extraction | Built | [receipt-ocr](https://github.com/hellpuffyt/receipt-ocr), [pdf-tables](https://github.com/hellpuffyt/pdf-tables), [whisper-index](https://github.com/hellpuffyt/whisper-index) |
 | Developer tooling | Built | [repograph](https://github.com/hellpuffyt/repograph), [docatlas](https://github.com/hellpuffyt/docatlas), [changelog-forge](https://github.com/hellpuffyt/changelog-forge), [bootstrap-dev](https://github.com/hellpuffyt/bootstrap-dev) |
