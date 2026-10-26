@@ -17,12 +17,12 @@ Systems built from first principles: compilers, interpreters, virtual machines, 
 
 | Repository | What it does | Language |
 | :-- | :-- | :-- |
-| [bellows-compiler](https://github.com/hellpuffyt/bellows-compiler) | Optimizing compiler for Ash, a small typed language: lexer, parser, sema with rustc-style diagnostics, three-address IR + interpreter, fixpoint optimizer, x86-64 codegen (Linux/Windows) with runtime traps and DWARF line info. Zero dependencies. | Rust |
-| [emberline-engine](https://github.com/hellpuffyt/emberline-engine) | Deterministic, rewindable 2D game engine in TypeScript: fixed-step ECS, input timeline with hold-to-rewind, replays, verifiable save files, AABB physics, Canvas2D, asset pipeline, scripting. Zero runtime deps. | TypeScript |
-| [halyard-vm](https://github.com/hellpuffyt/halyard-vm) | Deterministic, gas-metered, capability-gated register VM for running untrusted automation. Snapshot/resume, traps, assembler, debugger. Zero dependencies. | Rust |
-| [tarn-lang](https://github.com/hellpuffyt/tarn-lang) | A small language for agent workflows: deterministic cooperative tasks, typed capability-gated tools (--allow http,fs,...), record/replay of every side effect, gradual static types, formatter, REPL. Go stdlib only. | Go |
+| [bellows-compiler](https://github.com/hellpuffyt/bellows-compiler) | Compiler for Ash, a small typed language: IR, optimizer, x86-64 codegen, and an IR interpreter it is tested against | Rust |
+| [emberline-engine](https://github.com/hellpuffyt/emberline-engine) | Deterministic TypeScript 2D game engine: fixed-step ECS, hold-to-rewind, replays, saves verified by replaying inputs | TypeScript |
+| [halyard-vm](https://github.com/hellpuffyt/halyard-vm) | Deterministic, gas-metered register VM in Rust with capability-gated syscalls, snapshot/resume, assembler and debugger | Rust |
+| [tarn-lang](https://github.com/hellpuffyt/tarn-lang) | Small language for agent workflows: deterministic tasks, capability-gated typed tools, record/replay of side effects. | Go |
 | [tesseradb](https://github.com/hellpuffyt/tesseradb) | Embedded temporal SQL database: every row version retained, AS OF queries, transactional event streams, WAL recovery. Zero dependencies, pure Rust. | Rust |
-| [Deterministic-TimeMachine](https://github.com/hellpuffyt/Deterministic-TimeMachine) | Make flaky tests reproducible: record nondeterministic inputs (time, randomness, fs, env, network) and replay them exactly, with divergence diagnostics and trace minimization | Rust |
+| [Deterministic-TimeMachine](https://github.com/hellpuffyt/Deterministic-TimeMachine) | Rust library and tm CLI: read time, RNG, files, env and network through a Ctx to record and exactly replay flaky tests | Rust |
 | [AST-StateFuzzer](https://github.com/hellpuffyt/AST-StateFuzzer) | Structure-aware fuzzer for a small typed language: AST generation and mutation, differential oracles, grammar-aware minimization, reproducible seeds | Rust |
 
 ## Security & Infrastructure
@@ -31,28 +31,28 @@ Defensive tooling for configuration, transport security, logs and networks.
 
 | Repository | What it does | Language |
 | :-- | :-- | :-- |
-| [certwatch](https://github.com/hellpuffyt/certwatch) | Concurrent TLS certificate expiry monitor for host fleets with tiered alerting and state tracking | Go |
+| [certwatch](https://github.com/hellpuffyt/certwatch) | TLS certificate expiry checker for host inventories: severity tiers, state diffing, table/JSON/Prometheus output | Go |
 | [confaudit](https://github.com/hellpuffyt/confaudit) | Audits nginx, sshd, and Docker configuration files for settings that weaken security, naming the exact consequence of each finding. | Rust |
 | [configsync](https://github.com/hellpuffyt/configsync) | Detect configuration drift between environments across .env, YAML, JSON, TOML, and .properties files, with secret-safe output. | Go |
 | [dnsdrift](https://github.com/hellpuffyt/dnsdrift) | Detect DNS record drift across resolvers and over time, distinguishing propagation lag from genuine misconfiguration. | Go |
-| [dotenv-doctor](https://github.com/hellpuffyt/dotenv-doctor) | Validate .env files against a committed .env.example: missing keys, unfilled placeholders, weak secrets, and credentials left in the example. Zero runtime dependencies. | Python |
-| [evtlog-triage](https://github.com/hellpuffyt/evtlog-triage) | Correlates Windows Event Log sequences (brute force, spray, privilege escalation, log tampering, and more) into actionable security findings, not just individual events. | C# |
+| [dotenv-doctor](https://github.com/hellpuffyt/dotenv-doctor) | Check .env files against a committed .env.example: missing keys, placeholders, weak secrets, credentials in the example | Python |
+| [evtlog-triage](https://github.com/hellpuffyt/evtlog-triage) | Correlate Windows Security log exports (JSON/CSV) into findings: brute force, spray, log clearing, suspicious services | C# |
 | [headerscan](https://github.com/hellpuffyt/headerscan) | Audit HTTP response security headers and grade them A-F. Context-aware: reports HSTS over plain HTTP as ineffective, max-age=0 as high severity, and unsafe-inline by directive. Rust, no unsafe. | Rust |
 | [k8s-lint](https://github.com/hellpuffyt/k8s-lint) | Lints Kubernetes manifests for reliability and security defaults, explaining the production failure each rule prevents. | Go |
-| [packetlens](https://github.com/hellpuffyt/packetlens) | A live, readable packet inspector: pcap decode, connection tracking, and plain-English flow explanations. No bundled Wireshark. | Rust |
+| [packetlens](https://github.com/hellpuffyt/packetlens) | Decodes pcap files (Ethernet, IP, TCP/UDP/ICMP, DNS, TLS ClientHello), tracks flows and explains each in one sentence. | Rust |
 | [pii-redactor](https://github.com/hellpuffyt/pii-redactor) | Local, policy-driven detection and redaction of personal data in text, CSV, JSON, and log files, with a reversible token map kept out of band. | Python |
 | [portwatch](https://github.com/hellpuffyt/portwatch) | Inventory listening TCP/UDP ports and their owning processes, and report what changed since the last snapshot. | Rust |
-| [ratelimit-rs](https://github.com/hellpuffyt/ratelimit-rs) | Token bucket, GCRA, sliding window and fixed window rate limiters with an injectable clock, a machine-checked comparison suite, and no runtime dependencies. | Rust |
+| [ratelimit-rs](https://github.com/hellpuffyt/ratelimit-rs) | Token bucket, GCRA, sliding window and fixed window rate limiters in Rust, with an injectable clock and no dependencies. | Rust |
 | [shadowlab](https://github.com/hellpuffyt/shadowlab) | A sandboxed, defensive-only security exercise runner: log-analysis, config-audit, and incident-response scenarios with scored partial credit. | Python |
-| [spindrift](https://github.com/hellpuffyt/spindrift) | Programmable HTTP/1.1 server with its own RFC 9112 stack, a pipeline language (routes, middleware, conditions, templates), static files, reverse proxy, SSE, rate limits, metrics, SIGHUP reload, graceful drain. Stdlib only. | Go |
-| [statuscraft](https://github.com/hellpuffyt/statuscraft) | A status page generator that refuses to lie: statuses are derived from real synthetic checks, never hand-edited. | TypeScript |
-| [tlsprobe](https://github.com/hellpuffyt/tlsprobe) | Audits a TLS endpoint's certificate chain, expiry, and protocol/cipher configuration, reporting graded findings with plain-language remediation. | Rust |
-| [tokenpit](https://github.com/hellpuffyt/tokenpit) | Decode, verify and explain JWTs with a threat model attached to every claim — a live workbench plus a scriptable CLI. | TypeScript |
-| [vercel-slm](https://github.com/hellpuffyt/vercel-slm) | — <sub>Prototype of the Serverless Log Monitoring & Threat Alert System.</sub> | JavaScript |
-| [win-audit](https://github.com/hellpuffyt/win-audit) | Read-only PowerShell auditor for Windows security posture: services, scheduled tasks, shares, accounts, policy, and firewall, with severity-scored findings and remediation guidance. | PowerShell |
-| [eBPF-KernelTrace-MCP](https://github.com/hellpuffyt/eBPF-KernelTrace-MCP) | Permission-controlled Linux kernel telemetry (Aya eBPF) for MCP-compatible AI assistants — with a deterministic synthetic mode that runs anywhere | Rust |
+| [spindrift](https://github.com/hellpuffyt/spindrift) | HTTP/1.1 server in Go with its own RFC 9112 parser and a small pipeline language for routing, proxying and rate limits. | Go |
+| [statuscraft](https://github.com/hellpuffyt/statuscraft) | Static status page generator: statuses and incidents are derived from an append-only log of real HTTP check results. | TypeScript |
+| [tlsprobe](https://github.com/hellpuffyt/tlsprobe) | TLS endpoint audit CLI in Rust: chain trust, expiry, hostname and key checks, A-F grade, findings with remediation. | Rust |
+| [tokenpit](https://github.com/hellpuffyt/tokenpit) | JWT decoder with a threat model: browser workbench and Node CLI flagging alg none, weak HMAC secrets, header key tricks. | TypeScript |
+| [vercel-slm](https://github.com/hellpuffyt/vercel-slm) | Vercel function that matches POSTed log lines against regex rules, stores incidents in Supabase and alerts on brute force. <sub>Prototype of the Serverless Log Monitoring & Threat Alert System.</sub> | JavaScript |
+| [win-audit](https://github.com/hellpuffyt/win-audit) | Read-only PowerShell module that audits Windows services, tasks, shares, accounts, policy and firewall (23 checks). | PowerShell |
+| [eBPF-KernelTrace-MCP](https://github.com/hellpuffyt/eBPF-KernelTrace-MCP) | Read-only MCP server for Linux exec/exit/openat events from Aya eBPF probes, with a synthetic mode for any OS | Rust |
 | [ChaosProxy-L7](https://github.com/hellpuffyt/ChaosProxy-L7) | Loopback-first Layer 7 fault-injection proxy: HTTP/1.1 + h2c faults, protocol-aware PostgreSQL scenarios, sandboxed WebAssembly matchers | Rust |
-| [Titan-HFT](https://github.com/hellpuffyt/Titan-HFT) | Deterministic price-time order-matching engine and lock-free SPSC queue in Rust — an educational, measured, tested low-latency systems project | Rust |
+| [Titan-HFT](https://github.com/hellpuffyt/Titan-HFT) | Deterministic price-time order-matching engine in Rust: lock-free SPSC queue, replayable journal, measured benchmarks | Rust |
 
 ## AI & Data
 
@@ -61,23 +61,23 @@ Evaluation, benchmarking and data-quality tools for ML and LLM work.
 | Repository | What it does | Language |
 | :-- | :-- | :-- |
 | [csvsurgeon](https://github.com/hellpuffyt/csvsurgeon) | Stream-transform very large CSV files with a small, safe expression language, never loading the file into memory. | Python |
-| [dataset-profiler](https://github.com/hellpuffyt/dataset-profiler) | Profile a tabular dataset - inferred types, cardinality, null patterns - and measure distribution drift against a stored baseline. Zero dependencies. | Python |
+| [dataset-profiler](https://github.com/hellpuffyt/dataset-profiler) | Profile a CSV file's types, cardinality and null patterns, then measure drift against a stored baseline. No dependencies. | Python |
 | [doc-classifier](https://github.com/hellpuffyt/doc-classifier) | Classify business documents by type from text and layout features, with calibrated confidence via temperature scaling. Zero dependencies. | Python |
 | [embed-explorer](https://github.com/hellpuffyt/embed-explorer) | Explore an embedding space from the terminal: nearest neighbours, clusters, outliers, and drift between snapshots. | Python |
-| [feature-drift](https://github.com/hellpuffyt/feature-drift) | Detect feature drift between training and serving data and report which features moved and by how much. PSI, KS, TV distance. Zero dependencies. | Python |
+| [feature-drift](https://github.com/hellpuffyt/feature-drift) | Report which features drifted between training and serving data, and by how much: PSI, KS, missing rates, schema | Python |
 | [img-dedupe](https://github.com/hellpuffyt/img-dedupe) | Find near-duplicate images by perceptual hash, cluster them, and produce a review manifest before anything is deleted. | Python |
 | [label-audit](https://github.com/hellpuffyt/label-audit) | Audit a labelled dataset for annotator disagreement, class imbalance, cross-split duplicates, and label leakage. Zero dependencies. | Python |
-| [llm-cost-ledger](https://github.com/hellpuffyt/llm-cost-ledger) | Attribute LLM API spend per project, model and prompt from provider usage exports, with statistically-gated drift alerts on cost per request. | Python |
-| [model-bench](https://github.com/hellpuffyt/model-bench) | Benchmark local LLM inference across runtimes: tokens per second, time to first token and memory ceiling, at fixed prompts — and never a number it did not measure. | Python |
-| [modelharbor](https://github.com/hellpuffyt/modelharbor) | A visual control center for every configured LLM provider — live health, task-aware routing with failover, and a real usage-cost dashboard. | TypeScript |
+| [llm-cost-ledger](https://github.com/hellpuffyt/llm-cost-ledger) | Attribute LLM spend per project, feature and model from usage exports; flags cost-per-request drift with Welch's t-test. | Python |
+| [model-bench](https://github.com/hellpuffyt/model-bench) | Benchmark local LLM runtimes (Ollama, OpenAI-compatible): time to first token, tokens/s and memory, at fixed prompts. | Python |
+| [modelharbor](https://github.com/hellpuffyt/modelharbor) | Self-hosted LLM provider dashboard: per-model health checks, task-based routing with failover, token and cost tracking | TypeScript |
 | [notebook-lint](https://github.com/hellpuffyt/notebook-lint) | Lint Jupyter notebooks for committed outputs, secrets, out-of-order execution, and cells that no longer run. Zero dependencies. | Python |
-| [pdf-tables](https://github.com/hellpuffyt/pdf-tables) | Extract tables from PDFs into CSV, detecting ruled and whitespace-aligned layouts and honestly reporting when the structure is ambiguous. | Python |
+| [pdf-tables](https://github.com/hellpuffyt/pdf-tables) | Extract tables from PDFs into CSV, detecting ruled and whitespace-aligned layouts and flagging ambiguous structure. | Python |
 | [promptdiff](https://github.com/hellpuffyt/promptdiff) | A regression harness for prompt changes: run a fixed evaluation suite across prompt versions and report the behavioural diff, not just a text diff. | Python |
 | [rag-eval](https://github.com/hellpuffyt/rag-eval) | Offline evaluation for RAG pipelines: retrieval metrics, lexical groundedness, and three-way failure attribution. | Python |
 | [receipt-ocr](https://github.com/hellpuffyt/receipt-ocr) | Extract structured fields (total, date, vendor, tax, line items) from receipt and invoice images, with a confidence score per field. | Python |
 | [schemaevo](https://github.com/hellpuffyt/schemaevo) | Explains Avro and JSON Schema evolution compatibility breaks in reader/writer terms, with fixes. | Java |
-| [timeseries-anomaly](https://github.com/hellpuffyt/timeseries-anomaly) | Detects anomalies in metric time series using seasonal decomposition and robust, self-implemented statistics tuned to suppress weekend false alarms. | Python |
-| [whisper-index](https://github.com/hellpuffyt/whisper-index) | Build a searchable, timestamped transcript index from Whisper JSON/SRT/VTT output, with results that jump back to the source. Zero dependencies. | Python |
+| [timeseries-anomaly](https://github.com/hellpuffyt/timeseries-anomaly) | Anomaly detection for hourly metrics: median-based seasonal decomposition, MAD/Hampel scoring, level-shift detection. | Python |
+| [whisper-index](https://github.com/hellpuffyt/whisper-index) | Searchable, timestamped index over Whisper JSON/SRT/VTT transcripts. Results point to the second to seek to. | Python |
 
 ## Developer Tools & Automation
 
@@ -85,23 +85,23 @@ Small, sharp tools for builds, configs, APIs and documentation.
 
 | Repository | What it does | Language |
 | :-- | :-- | :-- |
-| [a11y-sweep](https://github.com/hellpuffyt/a11y-sweep) | Audit static HTML for accessibility defects with findings that name the affected user, not just the failing rule. Zero dependencies. | TypeScript |
-| [apiary-mock](https://github.com/hellpuffyt/apiary-mock) | A strict OpenAPI-driven mock API server that validates requests against the spec and replays recorded scenarios. | TypeScript |
+| [a11y-sweep](https://github.com/hellpuffyt/a11y-sweep) | CLI that checks static HTML for accessibility defects and says which users each one affects and how. No dependencies. | TypeScript |
+| [apiary-mock](https://github.com/hellpuffyt/apiary-mock) | OpenAPI 3.0/3.1 mock server that validates requests against the spec, generates schema-valid responses, serves scenarios | TypeScript |
 | [bootstrap-dev](https://github.com/hellpuffyt/bootstrap-dev) | Idempotent, verified, resumable dev machine bootstrapper with a check/apply/verify step framework. | Shell |
-| [bundle-forensics](https://github.com/hellpuffyt/bundle-forensics) | Explain a JavaScript bundle: which import pulled in what, which dependencies are duplicated, and what changed between two builds. | TypeScript |
+| [bundle-forensics](https://github.com/hellpuffyt/bundle-forensics) | Explain a JS bundle: which import pulled in what, which dependencies are duplicated, and what changed between builds. | TypeScript |
 | [changelog-forge](https://github.com/hellpuffyt/changelog-forge) | Generate a release changelog from conventional commits, grouped by impact, with breaking changes surfaced first. | TypeScript |
 | [cron-explain](https://github.com/hellpuffyt/cron-explain) | Parse a cron expression, explain it in prose, and preview the next runs correctly across DST edges. Zero dependencies. | TypeScript |
-| [docatlas](https://github.com/hellpuffyt/docatlas) | A documentation site engine whose cross-references cannot go stale — live code includes, dead-link checking, and BM25 search, built with itself. | TypeScript |
-| [fdupe](https://github.com/hellpuffyt/fdupe) | Fast, safe duplicate file finder with a size/sample/hash cascade and a reviewable deletion workflow. | Rust |
-| [hexatlas](https://github.com/hellpuffyt/hexatlas) | Inspect and diff binary files against reusable structure templates, with a live hex + field-annotation view. | Rust |
+| [docatlas](https://github.com/hellpuffyt/docatlas) | Static docs generator: code blocks included from source files at build time, dead links fail the build, BM25 search. | TypeScript |
+| [fdupe](https://github.com/hellpuffyt/fdupe) | Duplicate file finder: size, sample and SHA-256 cascade, hard-link detection, and a reviewable delete manifest | Rust |
+| [hexatlas](https://github.com/hellpuffyt/hexatlas) | Describe a binary format once in a small DSL, then annotate hex dumps, decode fields and diff files field by field. | Rust |
 | [imgpipe](https://github.com/hellpuffyt/imgpipe) | A dependency-light C++20 image pipeline (resize, blur, convert) that measures and gates its own throughput | C++ |
-| [logtail-rs](https://github.com/hellpuffyt/logtail-rs) | Streaming query and aggregation engine for high-volume JSON logs, with a real filter expression language. | Rust |
-| [repograph](https://github.com/hellpuffyt/repograph) | An interactive architecture map for a codebase: module dependency graph, circular-dependency and dead-code detection, API-surface extraction, and click-to-highlight blast radius. | TypeScript |
+| [logtail-rs](https://github.com/hellpuffyt/logtail-rs) | CLI that filters and aggregates NDJSON logs with a small query language, in bounded memory, and follows rotated files. | Rust |
+| [repograph](https://github.com/hellpuffyt/repograph) | CLI that maps a TS/JS repo's import graph (cycles, unused exports, blast radius) into one self-contained HTML viewer | TypeScript |
 | [schema-infer](https://github.com/hellpuffyt/schema-infer) | Infer a JSON Schema 2020-12 document from sample JSON or NDJSON. Conservative by design: claims only what the evidence supports. | TypeScript |
 | [sql-migrate-lint](https://github.com/hellpuffyt/sql-migrate-lint) | Lints SQL migrations for operations that lock tables, rewrite data, or are irreversible on a live database. | Python |
-| [structdiff](https://github.com/hellpuffyt/structdiff) | Semantic diff viewer for JSON/YAML/config that detects moved and renamed keys instead of line noise, with a side-by-side visual diff and a CI-ready CLI. | TypeScript |
-| [tsconfig-doctor](https://github.com/hellpuffyt/tsconfig-doctor) | Diagnose tsconfig settings that silently change behaviour — consequences with extends-chain provenance, not setting names. Zero dependencies. | TypeScript |
-| [waterfall-lens](https://github.com/hellpuffyt/waterfall-lens) | Analyse a HAR capture into an interactive waterfall: blocking chains, third-party weight attribution, and a plain-English explanation of what delayed first paint. | TypeScript |
+| [structdiff](https://github.com/hellpuffyt/structdiff) | Semantic diff for JSON and YAML that reports moved and renamed keys as single ops. CLI with CI exit codes, web viewer. | TypeScript |
+| [tsconfig-doctor](https://github.com/hellpuffyt/tsconfig-doctor) | Reports tsconfig.json settings that silently change runtime behaviour, with the consequence and the file that set it. | TypeScript |
+| [waterfall-lens](https://github.com/hellpuffyt/waterfall-lens) | CLI that reads a HAR file, explains what delayed first paint, and writes a self-contained HTML waterfall report. | TypeScript |
 | [webhook-lens](https://github.com/hellpuffyt/webhook-lens) | Capture, inspect, and replay inbound webhooks locally, verifying provider HMAC signatures before you trust a payload. | TypeScript |
 | [ArchitectFlow](https://github.com/hellpuffyt/ArchitectFlow) | Visual software-design studio: editable architecture graph, UI/UX design, validation engine and implementation-prompt generation from the saved design | Python |
 
@@ -111,9 +111,9 @@ Older experiments, kept public for context.
 
 | Repository | What it does | Language |
 | :-- | :-- | :-- |
-| [ai-detector](https://github.com/hellpuffyt/ai-detector) | — <sub>Builds on a third-party dataset and model credited in its README.</sub> | Python |
-| [ml-tradingbot](https://github.com/hellpuffyt/ml-tradingbot) | AI-powered trading bot with FinBERT sentiment analysis <sub>Early learning project.</sub> | Python |
-| [puffer-tracker](https://github.com/hellpuffyt/puffer-tracker) | Puffer is a full-stack stock tracking and market analysis application designed to help users monitor stocks, analyze market trends, and manage financial data in real time. Built with a modern tech stack, Puffer focuses on performance, scalability, and clean architecture while keeping the user experience simple and intuitive. <sub>Early full-stack project.</sub> | TypeScript |
+| [ai-detector](https://github.com/hellpuffyt/ai-detector) | AI-text detector: Wikipedia scrape, GPT rewrites via Batch API, LoRA-tuned BERT classifier, RAID benchmark analysis <sub>Builds on a third-party dataset and model credited in its README.</sub> | Python |
+| [ml-tradingbot](https://github.com/hellpuffyt/ml-tradingbot) | Educational FinBERT headline-sentiment strategy for one symbol, run only as a simulated LumiBot backtest. <sub>Early learning project.</sub> | Python |
+| [puffer-tracker](https://github.com/hellpuffyt/puffer-tracker) | Next.js stock dashboard: TradingView market widgets, Finnhub ticker search, and Inngest + Gemini news-summary e-mails. <sub>Early full-stack project.</sub> | TypeScript |
 
 ---
 
