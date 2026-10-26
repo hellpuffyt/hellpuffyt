@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/hellpuff-banner-static.svg">
-  <img src="assets/hellpuff-banner.svg" width="100%" alt="hellpuff — Building things that should exist. Software engineer working across products, infrastructure, security and AI systems.">
+  <img src="assets/hellpuff-banner.svg" width="100%" alt="hellpuff: Building things that should exist. Prabesh Sharma, software engineer.">
 </picture>
 
 <br>
@@ -13,7 +13,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/section-stack-dark.svg">
-  <img src="assets/section-stack-light.svg" width="100%" alt="01 — Toolkit">
+  <img src="assets/section-stack-light.svg" width="100%" alt="01 Toolkit">
 </picture>
 
 <picture>
@@ -27,7 +27,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/section-showcase-dark.svg">
-  <img src="assets/section-showcase-light.svg" width="100%" alt="02 — Open source">
+  <img src="assets/section-showcase-light.svg" width="100%" alt="02 Open source">
 </picture>
 
 <sub>Real screenshots of each project running locally on bundled or synthetic data.</sub>
@@ -83,41 +83,41 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/section-products-dark.svg">
-  <img src="assets/section-products-light.svg" width="100%" alt="03 — Products">
+  <img src="assets/section-products-light.svg" width="100%" alt="03 Products">
 </picture>
 
 <sub>Private codebases. Each row opens the public site or the case study.</sub>
 
 <!-- work:products:start -->
-<a href="https://datajewellers.com"><img src="assets/work/datajewellers.svg" width="100%" alt="DataJewellers — Jewellery ERP and billing for Nepal. Commercial."></a><br>
-<a href="https://datarestro.com"><img src="assets/work/datarestro.svg" width="100%" alt="DataRestro — Restaurant operating system. Working build."></a><br>
-<a href="https://dataudaan.com"><img src="assets/work/dataudaan.svg" width="100%" alt="DataUdaan — Flights, hotels and buses behind one supplier layer. In development."></a><br>
-<a href="https://dataaccommodation.com"><img src="assets/work/dataaccommodation.svg" width="100%" alt="DataAccommodation — Hotel operating system, PMS to guest portal. Working build."></a><br>
-<a href="https://www.hellpuff.dev/work/dataitemize"><img src="assets/work/dataitemize.svg" width="100%" alt="DataItemize — Configurable inventory on an immutable ledger. Working build."></a><br>
-<a href="https://www.hellpuff.dev/work/timetravel"><img src="assets/work/timetravel.svg" width="100%" alt="TimeTravel — B2B airline ticketing for travel agencies. Commercial."></a><br>
-<a href="https://www.sitashreejewellers.com"><img src="assets/work/sita-shree.svg" width="100%" alt="Sita Shree Jewellers — Storefront and billing ERP for a client jeweller. Deployed."></a>
+<a href="https://datajewellers.com"><img src="assets/work/datajewellers.svg" width="100%" alt="DataJewellers: Jewellery ERP and billing for Nepal. Commercial."></a><br>
+<a href="https://datarestro.com"><img src="assets/work/datarestro.svg" width="100%" alt="DataRestro: Restaurant POS, kitchen display and stock. Working build."></a><br>
+<a href="https://dataudaan.com"><img src="assets/work/dataudaan.svg" width="100%" alt="DataUdaan: Flights, hotels and buses behind one supplier layer. In development."></a><br>
+<a href="https://dataaccommodation.com"><img src="assets/work/dataaccommodation.svg" width="100%" alt="DataAccommodation: Hotel PMS, front desk, booking engine and guest portal. Working build."></a><br>
+<a href="https://www.hellpuff.dev/work/dataitemize"><img src="assets/work/dataitemize.svg" width="100%" alt="DataItemize: Configurable inventory on an immutable ledger. Working build."></a><br>
+<a href="https://www.hellpuff.dev/work/timetravel"><img src="assets/work/timetravel.svg" width="100%" alt="TimeTravel: B2B airline ticketing for travel agencies. Commercial."></a><br>
+<a href="https://www.sitashreejewellers.com"><img src="assets/work/sita-shree.svg" width="100%" alt="Sita Shree Jewellers: Storefront and billing ERP for a client jeweller. Deployed."></a>
 <!-- work:products:end -->
 
 <br>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/section-systems-dark.svg">
-  <img src="assets/section-systems-light.svg" width="100%" alt="04 — Systems">
+  <img src="assets/section-systems-light.svg" width="100%" alt="04 Systems">
 </picture>
 
 <sub>Open source unless the row says case study.</sub>
 
 <!-- work:systems:start -->
-<a href="https://github.com/hellpuffyt/vercel-slm"><img src="assets/work/slm.svg" width="100%" alt="Serverless Log Monitoring &amp; Threat Alert System — Rule-based detection, brute-force windows, webhook alerts. Prototype."></a><br>
-<a href="https://github.com/hellpuffyt/eBPF-KernelTrace-MCP"><img src="assets/work/ebpf-kerneltrace-mcp.svg" width="100%" alt="eBPF-KernelTrace-MCP — Kernel telemetry for AI assistants. Rust."></a><br>
-<a href="https://github.com/hellpuffyt/Titan-HFT"><img src="assets/work/titan-hft.svg" width="100%" alt="Titan-HFT — Deterministic matching engine. Rust."></a><br>
-<a href="https://github.com/hellpuffyt/ChaosProxy-L7"><img src="assets/work/chaosproxy-l7.svg" width="100%" alt="ChaosProxy-L7 — Layer-7 fault-injection proxy. Rust."></a><br>
-<a href="https://github.com/hellpuffyt/bellows-compiler"><img src="assets/work/bellows-compiler.svg" width="100%" alt="bellows-compiler — Optimizing compiler with x86-64 codegen. Rust."></a><br>
-<a href="https://github.com/hellpuffyt/tesseradb"><img src="assets/work/tesseradb.svg" width="100%" alt="tesseradb — Temporal SQL database, every row version kept. Rust."></a><br>
-<a href="https://github.com/hellpuffyt/halyard-vm"><img src="assets/work/halyard-vm.svg" width="100%" alt="halyard-vm — Gas-metered sandbox VM for untrusted automation. Rust."></a><br>
-<a href="https://github.com/hellpuffyt/tarn-lang"><img src="assets/work/tarn-lang.svg" width="100%" alt="tarn-lang — A small language for agent workflows. Go."></a><br>
-<a href="https://github.com/hellpuffyt/spindrift"><img src="assets/work/spindrift.svg" width="100%" alt="spindrift — HTTP/1.1 server, from the RFC up. Go."></a><br>
-<a href="https://github.com/hellpuffyt/modelharbor"><img src="assets/work/modelharbor.svg" width="100%" alt="modelharbor — LLM provider control center. TypeScript."></a>
+<a href="https://github.com/hellpuffyt/vercel-slm"><img src="assets/work/slm.svg" width="100%" alt="Serverless Log Monitoring &amp; Threat Alert System: Rule-based detection, brute-force windows, webhook alerts. Prototype."></a><br>
+<a href="https://github.com/hellpuffyt/eBPF-KernelTrace-MCP"><img src="assets/work/ebpf-kerneltrace-mcp.svg" width="100%" alt="eBPF-KernelTrace-MCP: Kernel telemetry for AI assistants. Rust."></a><br>
+<a href="https://github.com/hellpuffyt/Titan-HFT"><img src="assets/work/titan-hft.svg" width="100%" alt="Titan-HFT: Deterministic matching engine. Rust."></a><br>
+<a href="https://github.com/hellpuffyt/ChaosProxy-L7"><img src="assets/work/chaosproxy-l7.svg" width="100%" alt="ChaosProxy-L7: Layer-7 fault-injection proxy. Rust."></a><br>
+<a href="https://github.com/hellpuffyt/bellows-compiler"><img src="assets/work/bellows-compiler.svg" width="100%" alt="bellows-compiler: Optimizing compiler with x86-64 codegen. Rust."></a><br>
+<a href="https://github.com/hellpuffyt/tesseradb"><img src="assets/work/tesseradb.svg" width="100%" alt="tesseradb: Temporal SQL database, every row version kept. Rust."></a><br>
+<a href="https://github.com/hellpuffyt/halyard-vm"><img src="assets/work/halyard-vm.svg" width="100%" alt="halyard-vm: Gas-metered sandbox VM for untrusted automation. Rust."></a><br>
+<a href="https://github.com/hellpuffyt/tarn-lang"><img src="assets/work/tarn-lang.svg" width="100%" alt="tarn-lang: A small language for agent workflows. Go."></a><br>
+<a href="https://github.com/hellpuffyt/spindrift"><img src="assets/work/spindrift.svg" width="100%" alt="spindrift: HTTP/1.1 server, from the RFC up. Go."></a><br>
+<a href="https://github.com/hellpuffyt/modelharbor"><img src="assets/work/modelharbor.svg" width="100%" alt="modelharbor: LLM provider control center. TypeScript."></a>
 <!-- work:systems:end -->
 
 <picture>
@@ -131,7 +131,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/section-focus-dark.svg">
-  <img src="assets/section-focus-light.svg" width="100%" alt="05 — Now">
+  <img src="assets/section-focus-light.svg" width="100%" alt="05 Now">
 </picture>
 
 - Multi-tenant SaaS that stays simple as it grows

@@ -182,7 +182,7 @@
       {
         "slug": "datarestro",
         "name": "DataRestro",
-        "desc": "Restaurant operating system",
+        "desc": "Restaurant POS, kitchen display and stock",
         "status": "Working build",
         "url": "https://datarestro.com",
         "label": "datarestro.com"
@@ -198,7 +198,7 @@
       {
         "slug": "dataaccommodation",
         "name": "DataAccommodation",
-        "desc": "Hotel operating system, PMS to guest portal",
+        "desc": "Hotel PMS, front desk, booking engine and guest portal",
         "status": "Working build",
         "url": "https://dataaccommodation.com",
         "label": "dataaccommodation.com"
