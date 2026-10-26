@@ -124,7 +124,7 @@ ${drawCSS}${reduce}` : '';
     hero({ x: 1180, y: 146, width: 270, animate }); // ends at y≈454, clear of the rule at 480
   return svgDoc({
     w: W, h: H,
-    title: `hellpuff — ${TAGLINE_TEXT}`,
+    title: `hellpuff: ${TAGLINE_TEXT}`,
     desc: `Banner with the hellpuff eagle logo and the headline "${TAGLINE_TEXT}".`,
     defs: glowDef + `<radialGradient id="heroWash" cx=".55" cy=".5" r=".6"><stop offset="0" stop-color="${c.emerald}" stop-opacity=".07"/><stop offset="1" stop-color="${c.emerald}" stop-opacity="0"/></radialGradient>`,
     style: css, body,
@@ -325,7 +325,7 @@ const blocks = {};
 for (const [group, items] of Object.entries(cfg.work)) {
   blocks[group] = items.map((item) => {
     write(`work/${item.slug}.svg`, indexRow(item, ++n));
-    return `<a href="${item.url}"><img src="assets/work/${item.slug}.svg" width="100%" alt="${`${item.name} — ${item.desc}. ${item.status}.`.replace(/&/g, '&amp;')}"></a>`;
+    return `<a href="${item.url}"><img src="assets/work/${item.slug}.svg" width="100%" alt="${`${item.name}: ${item.desc}. ${item.status}.`.replace(/&/g, '&amp;')}"></a>`;
   }).join('<br>\n');
 }
 
